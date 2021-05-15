@@ -13,6 +13,9 @@ let food = {
   y: Math.floor(Math.random() * 15 + 1) * box 
 }
 
+let totalPoints = snake.length - 1;
+let speed = 200;
+
 function criarBG() {
   context.fillStyle = "#dcd6f7";
   context.fillRect(0,0,16 * box, 16 * box)
@@ -56,6 +59,7 @@ function iniciarJogo() {
   criarBG();
   criarCobrinha();
   drawFood();
+  document.getElementById('total-points').innerHTML = totalPoints;
 
   let snakeX = snake[0].x;
   let snakeY = snake[0].y;
@@ -70,6 +74,7 @@ function iniciarJogo() {
   } else {
     food.x = Math.floor(Math.random() * 15 + 1) * box;
     food.y = Math.floor(Math.random() * 15 + 1) * box;
+    totalPoints++;
   }
 
 
@@ -82,5 +87,4 @@ function iniciarJogo() {
 
 }
 
-
-let jogo = setInterval(iniciarJogo, 300)
+let jogo = setInterval(iniciarJogo, speed)

@@ -8,10 +8,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   color: #424874;
 }
 
 h1 {
   font-weight: 800;
+  text-align: center;
+}
+
+.points {
+  margin: 50px;
+}
+
+.text-purple {
+  color: #424874;
+}
+
+.text-blue {
+  color: #a6b1e1;
 }
